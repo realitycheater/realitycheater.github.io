@@ -2,6 +2,8 @@
 
 Quick little attempt in writing a bit of front end, also serves as a nice little way of presenting myself on the internet.
 
+Written as part of the Stay Down Webring.
+
 Current Progress:
 - [x] Welcome page
 - [x] About Me
