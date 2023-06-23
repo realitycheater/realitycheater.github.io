@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>releases</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    var counter = 0; var length;
+    function left() {
+        if (counter > 0) {
+            counter--;
+        } else {
+            counter = length;
+        }
+        loadembed(counter);
+    }
+
+    function right() {
+        if (counter < length) {
+            counter++;
+        } else {
+            counter = 0;
+        }
+        loadembed(counter);
+    }
+
+    function loadembed(index) {
+        fetch('./videos.json')
+        .then((response) => response.json())
+        .then((json) => {
+            document.getElementById("embed").src = json.videos[index].URL;
+            document.getElementById("video-desc").innerHTML = json.videos[index].description;
+            length = Object.keys(json.videos).length;
+        });
+    }
+
+</script>
+<body onload="loadembed(0)">
+    <div class="box" id="tabs">
+        <a id="tab1" href="releases.html">releases</a><span> | </span>
+        <a id="tab2" href="peripherals.html">setup</a><span> | </span>
+        <a id="tab3" href="aboutme.html">about me</a>
+    </div>
+    <div class="box" id="home">
+        <a id="homebutton" href="index.html">return to home</a>
+    </div>
+    <div class="box" id="tab-title">
+        <p id="welcome-text" style="margin-bottom: 1.5%;">releases</p>
+    </div>
+    <div class="box" id="gallery" style="margin-bottom: 1.5%;">
+        <span style="font-size: 120px; margin-right: 5%;" id="leftbutton" onclick=left()>←</span>
+        <a style="vertical-align:middle"><iframe id="embed" width="854" height="480" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe></a>
+        <span style="font-size: 120px; margin-left: 5%;" id="rightbutton" onclick=right()>→</span>
+    </div>
+    <div class="box" id="video-desc">
+        <p></p>
+    </div>
+    <div class="box" id="footer">
+        <p id="footer-text"><i>site created by <a href="https://twitter.com/dokiww">@dokiww</a> as part of the stay down webring</i></p>
+    </div>
+</body>
+</html>
