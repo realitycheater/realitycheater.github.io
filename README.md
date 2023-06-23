@@ -12,3 +12,4 @@ Current Progress:
 - [x] Setup
 - [ ] Embed for discord
 - [ ] Custom domain name
+- [x] Make site mobile friendly
