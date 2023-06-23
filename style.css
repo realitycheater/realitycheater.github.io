@@ -58,10 +58,23 @@ body {
     font-size: 50px;
 }
 
-#tab-text, #video-desc, #about-me {
+#tab-text, #video-desc, #about-me, #setup-text {
     font-size: 20px;
     margin-left: 30%;
     margin-right: 30%;
+}
+
+.column {
+    float: left;
+    width: 40%;
+    margin: 5%;
+    text-align: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media only screen and (max-width: 600px) {
@@ -70,11 +83,22 @@ body {
         margin-left: 5%;
         margin-right: 5%
     }
+    #setup-text {
+        font-size: 16px;
+        margin-left: 0%;
+        margin-right: 0%
+    }
     #profilepic {
         float:left;
         margin-right: 1.5%;
         max-width: 40%;
         height: auto;
+    }
+    .column {
+        float: left;
+        width: 45vw;
+        margin: 1vw;
+        text-align: left;
     }
 }
 
@@ -106,16 +130,4 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.column {
-    float: left;
-    width: 50%;
-    text-align: left;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
