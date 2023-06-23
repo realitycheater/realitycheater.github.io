@@ -96,6 +96,11 @@ body {
     align-items: center;
 }
 
+#embed {
+    width: 50vw;
+    height: 28vw;
+}
+
 #leftbutton, #rightbutton {
     -khtml-user-select: none;
     -webkit-user-select: none;
