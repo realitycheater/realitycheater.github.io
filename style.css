@@ -64,14 +64,26 @@ body {
     margin-right: 30%;
 }
 
-.column {
+.landing-row {
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+}
+
+.logos {
+    scale: 0.8;
+    opacity: 0.9;
+    width: 20%;
+}
+
+.setup-column {
     float: left;
     width: 40%;
     margin: 5%;
     text-align: left;
 }
 
-.row:after {
+.setup-row:after {
   content: "";
   display: table;
   clear: both;
