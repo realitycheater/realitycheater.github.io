@@ -103,7 +103,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    #tab-text, #video-desc, #about-me, #blog-text {
+    #tab-text, #video-desc, #about-me, #blog-text, #blog-intro {
         font-size: 18px;
         margin-left: 5%;
         margin-right: 5%
