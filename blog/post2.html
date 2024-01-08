@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>blog</title>
+    <link href="../style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+</head>
+<body>
+    <div class="box" id="tabs">
+        <a id="tab1" href="/releases">releases</a><span> | </span>
+        <a id="tab2" href="/peripherals">setup</a><span> | </span>
+        <a id="tab3" href="/blog">blog</a><span> | </span>
+        <a id="tab4" href="/aboutme">about me</a>
+    </div>
+    <div class="box" id="home" style="font-size: 18px;">
+        <a id="homebutton" href="/blog">return to blog home</a>
+    </div>
+    <div class="box" id="tab-title">
+        <p>what?</p>
+    </div>
+    <div class="box" id="footer">
+        <p id="footer-text"><i><p>
+            this site is part of the <a href='https://staydown.money/'>staydown.money</a> 
+          webring
+          <a href='https://staydown.money/wr?prev=https://realitycheater.github.io/'>&lt;-&nbsp;prev</a>
+            <a href='https://staydown.money/wr?next=https://realitycheater.github.io/'>next&nbsp;-&gt;</a>
+          </p></i></p>
+    </div>
+    <div class="box" id="blog-text">
+        <p>My project manager’s a good person: He’s nice to me, is understanding when I tell him something does or doesn’t work, mostly understands how software is built, gives good advice, and is even willing to stand up and tell his boss “No” sometimes. Overall, I don’t have much to complain about him, other than the fact that as team lead he still hasn't re-hired a system analyst, a vacancy that adds a lot of work to everyone on the team. Can’t blame him too much - the market is a little dire right now.</p>
+        <p>However, as nice as he is, he too is stuck in hell with me. Working at the same desk with horrible ergonomics (Despite my best attempts, the table is far too low, giving my wrist and chest a bad time.), attending useless meetings, and sometimes, has to tell me to do something DEEPLY stupid while being fully aware that it’s stupid.</p>
+        <p>As I’ve mentioned in the last post, I’m currently working on an application which is supposed to be released in the mainland and also Hong Kong (Yes, an app of this scale is being developed by 2 people, something not even the most ambitious startup would do.). My bosses seemed to take pity on us, and decided to hire an extra developer for the team, so we got a third dev in the mainland. This is actually not a bad idea, since a dev in the mainland would have a better understanding of developing software in China, where the ecosystem is entirely different. So, why am I writing this post then?</p>
+        <p>Well, we’ve got a Gitlab repo, and so obviously, the right move is to add the new developer to the repo, make a branch for the mainland version, and have him get to work replacing the API calls to Chinese ones, leaving the UI and the user flow the same. Simple work that would take at most a month to complete.</p>
+        <p>But no, it can never be that simple.</p>
+        <p>Corporate decided that the codebase is actually “PROPRIETARY TECH”, and that it MUST be kept hidden from this dirty, outsourced dev that they hired. Therefore, we simply cannot let him access the repo, even if the app literally has ZERO proprietary technology. (Every single library used in the app is open source or written by a third party, a fact that displeased them as they complained to my face that two people were unable to create software better than GOOGLE). There is NOTHING special about the project, the only thing about the project that would even come close to being proprietary would be the idea itself, which we already told the new dev on the first day of him working.</p>
+        <p>Well, what do we do? The mainland version needs to be developed, but the guy responsible for it can’t even access the repo! Well we’ve got a genius solution: Screenshot the app, send the pictures to the new dev, ask him to recreate it, then he gives us the new code, and we insert it back into our code so the UI stays consistent!</p>
+        <p>This is obviously, extremely stupid, and is a massive waste of manpower, as whatever UI code he wrote will be discarded, and we have to spend time inserting his code into ours. Something that would take 1 person a month to complete, now takes three people multiple months.</p>
+        <p>During the meeting where I attended as one of the two devs, upon hearing that access to the repo was forbidden for our new dev, we immediately explained that this is a terrible idea, showing that it’s a waste of manpower, and that it did not make any sense. But management, with their inflated egos and low IQ, started rambling about how we can “turn the files into APIs that the dev can call.”, this too, obviously made no sense as extracting all non-UI functions would trigger a massive rewrite that would take months, and make the codebase a mess with the number of files. Unfortunately, as a junior I can’t just stand up and tell him to fuck off and let me do my job correctly, I mean I can, but that would get me fired and… Wait, nevermind.</p>
+        <p>After this disastrous meeting, I pleaded with my project manager, telling him that this is absolutely ludicrous and that we should just do it correctly and open up the codebase to him privately, or at least let him work on one file at a time, then he told me the following:</p>
+        <p>“Matt, of course I know it’s stupid, but we have to do it anyway.”</p>
+        <p>How? How is this the reality of software development? How are we wasting TWO MONTHS of manpower to do something like this? I know it’s stupid, my coworker knows it’s stupid, my project manager knows it’s stupid, and yet, somehow we must do it anyway? Why is it even possible for some dumbass with a MBA (Fake degree) to tell me how software development should work? The distinction should be clear: You tell me what needs to be built, and then the team decides how it’s going to be built, I do my part, you do yours.</p>
+        <p>Instead, corporate somehow has the ability to directly intervene with the development process, even if they have ZERO understanding of software. And as their employee, I have no choice but to obey, and this leads to wasted time, discarded code, and burnout. Any amount of the actual complexity involved in software engineering, from solving technical challenges, to learning new languages and frameworks, is simply glossed over by corporate because to them we are quite literally cogs in the machine churning out functions.</p>
+        <p>As such, they have come up with a myriad of ways to measure and “improve” developer output, none of which work because they do not recognize software engineering is ENGINEERING. A particular example would be the Gnatt chart, where managers force their developers to give a time estimate for every single part of the development process. Which is fundamentally impossible because I have no idea what kind of issues I am going to run into. Things can take a day, or a week if I run into a bug that I didn’t even know existed.</p>
+        <p>In simple projects, it is indeed possible to do such a thing since I know exactly what I need to do, but in bigger projects, it’s a fool’s errand and I’ve already seen it happen: a project at work is more than a YEAR late, but the managers are still huddled around the Gnatt chart like it means anything, moving the bars around like Tetris, and desperately trying to post-hoc their way into making sense of whatever they are trying to do.</p>
+        <p>I’d like to contrast this with my time as a teacher (Yes, you may not believe it.), where my boss didn’t micromanage me like this, since he understood that teaching and the progress can’t be quantified as it is a creative process, much like coding, designing an entire course takes time, and it also needs further iteration for improvements. My boss understood this, so the separation was clear: He tells me what to do, I do it, and if he likes the output, it’s done. He doesn’t barge into the classroom in the middle of my class to tell me something needs changing, or asks me how many lessons have I planned and how long it’s going to take before I hand in the lesson plans to him.</p>
+        <p>As such, work was highly efficient, everything I did was directly relevant to teaching, whether it’s packing teaching materials, drafting lesson plans, or teaching the classes themselves. Any amount of downtime was legitimately, real downtime where I finished work and I could relax and hang out with my coworkers (Who have all since become my closest friends IRL).</p>
+        <p>So why is this allowed to happen in tech? My only solace is that the mainland version of the application above has been put on hold, meaning the 3rd dev was hired for nothing, and he just sits at work now. While it’s sad to see another dev getting his life wasted, at least it’s not my life (also being wasted), and it saves me the time integrating his code back into mine.</p>
+        <p id="date-text">Written 08.01.2024</p>
+    </div>
+</body>
+</html>
