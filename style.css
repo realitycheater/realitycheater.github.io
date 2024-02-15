@@ -132,6 +132,11 @@ body {
         margin: 1vw;
         text-align: left;
     }
+    .center {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 #profilepic {
