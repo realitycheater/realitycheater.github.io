@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>blog</title>
+    <link href="../style.css?id=3333" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <meta property="og:title" content="doki's personal site.">
+    <meta property="og:description" content="A wasted life ain't no crime!">
+    <meta property="og:url" content="https://realitycheater.github.io/" />
+    <meta property="og:image" content="https://realitycheater.github.io/images/profilepic.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="I Went to an AI Workshop and You Can Guess What Happened">
+    <meta name="twitter:site" content="@dokiww">
+    <meta name="twitter:image" content="https://doki.staydown.money/images/profilepic.jpg">
+</head>
+<body>
+    <div class="box" id="tabs">
+        <a id="tab1" href="/releases">releases</a><span> | </span>
+        <a id="tab2" href="/peripherals">setup</a><span> | </span>
+        <a id="tab3" href="/blog">blog</a><span> | </span>
+        <a id="tab4" href="/aboutme">about me</a>
+    </div>
+    <div class="box" id="home" style="font-size: 18px;">
+        <a id="homebutton" href="/blog">return to blog home</a>
+    </div>
+    <div class="box" id="tab-title">
+        <p>I Went to an AI Workshop and You Can Guess What Happened</p>
+    </div>
+    <div class="box" id="footer">
+        <p id="footer-text"><i><p>
+            this site is part of the <a href='https://staydown.money/'>staydown.money</a> 
+          webring
+          <a href='https://staydown.money/wr?prev=https://realitycheater.github.io/'>&lt;-&nbsp;prev</a>
+            <a href='https://staydown.money/wr?next=https://realitycheater.github.io/'>next&nbsp;-&gt;</a>
+          </p></i></p>
+    </div>
+    <div class="box" id="blog-text">
+        <p>Recently, I was forced to go to an “AI Workshop” as my boss wasn’t available, and the department apparently REALLY needed someone on the team to go, so I - the only person on the team that had an understanding on how any of this works, was told to go. This seemed like a cool opportunity, since this is a good way to see how it’s like out there, and also get an ENTIRE afternoon off work.</p>
+        <p>I had some special instructions going into this, namely that I was to take pictures of the presentations - a TOP priority as I was told to do so by “any means possible”. I also need to report back after the workshop and go over what was shared, as surely, this highly important workshop that is definitely not a glorified advert (literally says “sponsored by Apple” on the flier) would have KEY information that would allow the company to develop deeply innovative technologies.</p>
+        <p>Anyway, I got to the workshop, which took place at a bar they rented out for the day, and I could order whatever I wanted to drink. After a good amount of self-restraint, I ordered a coke instead of having a beer at 2 in the afternoon, and waited for the presentations to start.</p>
+        <p>Soon, more people arrived, and I realized something important:</p>
+        <p>I am not supposed to be here. </p>
+        <p>Every single person coming in was clearly not a developer, everyone was at the very least a project manager, or even higher up the corporate ladder. Formal suits, clean looks, the whole nine yards. Which made me and my unfortunate coworker who was also forced here stand out like sore thumbs, since as most of you would know by scrolling my twitter, I look like a skatepark reject instead of a respectable member of the managerial class. </p>
+        <p>This also meant something else: Nothing that is going to be said in the next 3 hours will have anything to do with my job, since managers do not need, or want to hear the gritty technical details, that’s for the dirty devs to figure out. A couple more minutes later, the host came up to the stage and explained that there will be 3 talks, one from the Apple representative, and two from startup founders (wow!).</p>
+        <p>First was the Apple rep, and you can guess what happened - just 45 minutes of trying really hard to pretend Nvidia didn’t exist. He first sold the Macs as “AI PCs”, quoting a random business study that claimed that EVERYONE would conveniently need an AI PC by… 2025! Odd coincidence, I’m sure. Of course, what “AI PC” actually meant was never explained, but it sounds somewhat technical, which is the point. Then he showed a few benchmarks where scores from Nvidia GPUs were never shown, but AMD and Intel ones were, next he showed off some mildly interesting AI features on MacOS, like an official AI training environment for vision models, which has actually some utility, and might come in handy someday. He ended the presentation with a quick live demo of running Llama 2 locally at somewhere around 5 words per second on his max spec MacBook Pro, which was quite impressive, to be fair.</p>
+        <p>While we are here, can we just talk about the concept of running a LLM model locally? That was a 3000 dollar laptop outputting at 5 words per second. It is ALMOST magic that AI development has been so fast that we have this running locally off a portable device, but the truth is: For 99.9% of users it makes infinitely more sense to just use OpenAI’s services instead of setting your PC on fire to run inference, this is completely irrelevant for most users. For the server, it does make sense if your scale is big enough, running a high performance, open source model like Llama-3 is much cheaper than GPT-4, but again, if I need a server like that, why don’t I just buy a bunch of Nvidia GPUs? </p>
+        <p>Then, we got to the startups, which was FAR more interesting.</p>
+        <p>The first was from a soft-spoken man who claimed to run a company offering an education focused AI agent running locally off multiple Mac Pros, and that they can “retrain” the LLM to add new responses to inputs. Cool idea! Education is one of the few areas where the use of AI isn’t completely morally bankrupt, since it’s unlikely to hallucinate about 5th grade topics, and students get good answers out of an infinitely patient teacher (As long as they aren’t just throwing the entire question at the AI, but that’s a misuse of the tool, not an issue with the tool.). However as a developer, there are immediate questions.</p>
+        <p>Why is it operating locally instead of being a simple GPT wrapper? Even with multiple Mac Pros, it does not have the processing to serve a full class of students, let alone an entire school, so we are talking over 10000 USD in terms of JUST hardware cost just for a maximum capacity of about… 5 students concurrently as he said. </p>
+        <p>Also, retraining a LLM? Are we serious? What takes OpenAI and Facebook tens of millions of dollars to do, is somehow now achievable with a few Mac Pros with a few clicks? This is more than a bold-faced lie, but it would be bad form to call out startups for “overpromising” on features, since calling it what it is - a system prompt, would be less impressive and does not sound good to potential investors. The example he showed this “retraining” with is also pretty funny, by changing the system prompt he got the AI to say 1 + 1 = 3, a factually wrong statement that marketing people love to throw out to show that what they do totally adds real value! </p>
+        <p>Onto the second startup founder, a shy man working on AI information displays and advertisements, and what he said was a lot more honest - meaning his presentation was a lot less impressive. What he makes are simple AI agents providing responses to customers using a knowledge base, and generating images for advertising. Deeply evil work, and I hate him for it, but at least he’s honest! But hold on! The AI information display CAN speak Cantonese, so we can guess what models he’s running, and what kind of hardware he’s using (Hint: Not Macs, and not locally.), but it seems that no one picked up on it.</p>
+        <p>After his presentation, some sales guy for Apple dongles (You heard that right) came on stage and tried REALLY hard to sell… Dongles for a Mac, but as expected no one cared, and that was the end of it all. </p>
+        <p>As expected, I have learnt ABSOLUTELY nothing when it comes to the technology itself, just a bunch of buzzwords, hype and some explicit lies. Which is par for the course for this technology, however what’s more interesting are the lies, since they are usually some form of admission for the truth. The second guy went on and on about how AIs can hallucinate, aren't private and aren't consistent, all of which were true! These are problems that I faced during my time writing my AI assistant at work (Rabbit would call this a Large Action Model), and I would’ve loved to know how I can improve the performance of my implementation if just by 5%, but of course, I didn’t get an answer because… No one knows how to fix it! These are models that do not have any reasoning skills, and repeat the training data. That’s why you see it recommending that you add glue to your cheese so your pizza comes out better, because someone on reddit said you should 8 years ago.</p>
+        <p>Unfortunately, let’s be real, this is what tech is now, everything sucks, and the hype dictates that it MUST have AI in some form, so it’s up to the code monkeys like me to follow the orders, and add that damn feature. All that so I can get random notifications at work alerting me that my friends are talking about topic X on Discord, and only to see that they are in fact, NOT talking about topic X.</p>
+        <p>Oh, and those pictures that I’m supposed to take, and the report that I need to give at work? The Apple rep made it extremely clear that we aren’t allowed to take pictures 2 minutes into his presentation, and no one has approached me at work for the report an entire month later. Business as usual.</p>
+        <p>P.S. Apologies for not writing in a while, didn’t have much motivation and material to work with, banged this one out quickly as I actually have something to do at work now, since we got onto a project by grossly lying to the client about the team’s capabilities… I have material again!</p>
+        <p id="date-text" style="margin-bottom: 100px;">Written 29.05.2024</p>
+    </div>
+</body>
+</html>
