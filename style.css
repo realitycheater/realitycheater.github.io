@@ -102,6 +102,13 @@ body {
   clear: both;
 }
 
+.counter-container {
+    position: fixed;
+    bottom: 0px;
+    right: 1.5%;
+    z-index: 1000;
+}
+
 .center {
     display: block;
     margin-left: auto;
