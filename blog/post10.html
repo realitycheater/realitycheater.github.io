@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>blog</title>
+    <link href="../style.css?id=3333" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <meta property="og:title" content="doki's personal site.">
+    <meta property="og:description" content="A wasted life ain't no crime!">
+    <meta property="og:url" content="https://realitycheater.github.io/" />
+    <meta property="og:image" content="https://realitycheater.github.io/images/profilepic.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Thriving in the Pain Zone">
+    <meta name="twitter:site" content="@dokiww">
+    <meta name="twitter:image" content="https://doki.staydown.money/images/profilepic.jpg">
+</head>
+<body>
+    <div class="box" id="tabs">
+        <a id="tab1" href="/releases">releases</a><span> | </span>
+        <a id="tab2" href="/peripherals">setup</a><span> | </span>
+        <a id="tab3" href="/blog">blog</a><span> | </span>
+        <a id="tab4" href="/aboutme">about me</a>
+    </div>
+    <div class="box" id="home" style="font-size: 18px;">
+        <a id="homebutton" href="/blog">return to blog home</a>
+    </div>
+    <div class="box" id="tab-title">
+        <p>Thriving in the Pain Zone</p>
+    </div>
+    <div class="box" id="footer">
+        <p id="footer-text"><i><p>
+            this site is part of the <a href='https://staydown.money/'>staydown.money</a> 
+          webring
+          <a href='https://staydown.money/wr?prev=https://realitycheater.github.io/'>&lt;-&nbsp;prev</a>
+            <a href='https://staydown.money/wr?next=https://realitycheater.github.io/'>next&nbsp;-&gt;</a>
+          </p></i></p>
+    </div>
+    <div class="box" id="blog-text">
+        <p>It’s a Monday morning. My alarm goes off at 7:20, as per usual, I spend around 25 minutes trying to convince myself to get up, and once again, I manage to persuade myself to leave the comfort of my bed, and make my coffee with the cheapest beans I can find at the store - I might be cheap, but not cheap enough to drink instant. Downing the coffee with some oat milk, I put on my cap (because I am too lazy to fix my hair), leave my apartment, and get ready to enter the pain zone.</p> 
+        <p>What’s the pain zone? It’s the place that I currently work at as a contractor - a government office. Since the last time I wrote to this blog, I’ve been dealing with a new project, the details can be skipped, but basically, the company lied to secure a contract in a very niche field, with its own suite of specialized software. The government specifically asked for developers with the domain knowledge, and our team precisely has NONE of those.</p>
+        <p>Therefore, since July, I’ve been on crunch time, trying my absolute hardest - exactly 9 hours every day, since I’m only paid for that much, learning the systems and the SDK used for the main part of the project. As with government projects, we also need to write up various documents that no one will ever read, since my team has not had a tech lead in about 15 months, that responsibility also falls onto… me, the junior developer.</p>
+        <p>For about a month, I did absolutely no development and had to churn out about 10000 words, or over 80 pages of design documentation, for reference, my final year project at college had only a few more pages, and I worked on it for an entire YEAR with 3 other people, so you can guess the value of the documentation here. Inputs and outputs to various APIs are simply placeholders, the “implementation steps” are a roughly reworded user manual, and most of the technical decisions are provisional at best. I was quite worried about the quality of this document, I know it’s bad, and my project manager knows it’s bad, in fact, he knows HIS part of the document is also bad, but again - it doesn’t matter, so we rush the rest of the pages out, with some good news! We finally managed to hire a tech lead who is well-versed in the domain.</p>
+        <p>He got fired almost instantly. This guy would come into work, start sleeping immediately, and do absolutely nothing when he’s awake. I've seen the work - this guy wrote about 50 words of documentation in almost 2 weeks, but don’t worry, we just managed to borrow another team’s tech lead, who has worked on the same technology stack!</p>
+        <p>Andddd… he’s “non-technical”. Do you know what that means? I’m working in a software development company, where we are supposed to ship things (The value of those things remains questionable.), and I have a non-technical tech lead that is supposed to design systems. You know what? I’ll be nice, maybe he is quite business-oriented, and could at least help us improve our pathetic documentat- what he wrote is completely unusable. This guy legitimately sat there for 2 weeks and can only hand out word-for-word copied sentences from the existing user manual. Well, someone’s going to clean up the mess, so I churned out another 40 pages, and finally we can start developing, because while we pretend to be agile, we very much run on waterfall.</p>
+        <p>Well, at least I get to look at the existing codebase and start finishing functions and WHAT THE FUCK?</p>
+        <p>I’ve seen bad codebases, but what I’m looking at here is actually unbelievable. No comments, variables are named after nothing, a couple THOUSAND warning messages from the linter, entire blocks of code are unused but not removed, and good bits of the codebase actually don’t work. To make things a little worse, whoever wrote this “learned” how to “code” did it a few decades ago, so they define variables like how they used to in C, where it’s like this:</p>
+        <pre style="font-family: VCR OSD Mono;">
+    int i; string str = “”;
+    for (i = 0; i < 10; i++)
+    {
+        str = str + “hi”;
+    }
+        </pre>
+        <p>Since whoever wrote this 10 years ago (Yes, this means 10 years of uncleared tech debt as well.) likes to also write functions a couple HUNDRED lines long, the first 40 lines or so of functions are entirely for declaring variables with non-descriptive names like _tempStr. Unsurprisingly, it was written by outsourced “devs”, who I suspect might have been paid by LOC, because otherwise this wouldn’t be possible:</p>
+        <img src="../images/blog/image3.png" class="center"> 
+        <p>Luckily, while the code is absolute garbage written by people that should really have been serving me fries at lunch or driving the bus, the actual functionality is not too hard to figure out, so for most of these I can refactor them, do a few tests, and mark it as finished. As for the new ones, after digging around in the official documents and with my experience cleaning up the codebase, it’s also not too hard to add stuff.</p>
+        <p>I assume that most people that read this blog are a little bit younger than me, and found this off my twitter (or bluesky! Anything that reduces the influence that Elon Musk has over this civilization is good.), so here’s some advice to the CS majors out there… of course you are a CS major, I tweet about aiming in video games. Software engineering is a very unserious field, with how much the field has progressed in the last 4 decades, there now exist ergonomic languages, frameworks and tools for basically ANYTHING that you can possibly think of. Unless your code runs under the sea, in the kernel or in space, most things are almost trivial to develop once you understand the tech stack, and the fact that we have blazingly fast hardware means you can get away with full-on war crimes in the IDE. </p>
+        <p>This doesn’t mean that being a software developer is THAT easy though, if I got a concrete list of requirements, and could just sit there (preferably at home) for 9 hours writing code, I’d actually have some fun at work instead of the multiple borderline manic episodes I’ve had at my desk. The difficulty of software engineering doesn’t come from coding, it comes from the fact that technical leadership is somehow even more unserious.</p>
+        <p>For example, for this project, I wrote a REST API, taking the request, parsing the input, running a simple SQL query, and returning the result as a .json response, even including the input validation and logging, it’s only a couple hundred lines of code, and thanks to .NET making things pretty easy, it’s easy to host as well. Then, I extended the functionality of the industry-specific software with their own SDK to use that API I wrote. The whole process is written by me, and it only really took a week or so to make, even with me struggling with .xaml for a bit.</p>
+        <p>Technically, this was not challenging to make, and was actually almost fun as I could write half-decent code WITH comments, I still couldn’t mark the function as done because the requirements kept changing, half of this is because this is just how software projects are - the client never knows what they want, only what they DON’T want, and the other half is because this is a government project, and people who work government over here are often so incredibly mentally checked out that their physiognomy starts to reflect it as well.</p>
+        <p>Speaking of which, these people genuinely do nothing, and I mean nothing. They basically just sit at their desk for precisely 8 hours a day, and leave the SECOND the clock hits 5 - at least I stay around for a couple more minutes just so I don’t look like I completely despise my job. On Fridays they love to huddle around and have a little tea party, with 20 or so people standing around the office drinking boba, completely shamelessly. I swear you can see it on their faces too, they never look like they are “there”, I think my job is soul-crushing, but at least I still have a soul that is getting crushed, instead of having it outright surgically removed. Nonetheless, they are still the “client” so I still have to sit there and politely tell them to fuck off when they ask me whether or not a feature that was directly communicated to be finished next MONTH is done yet.</p>
+        <p>There’s a lot of this dysfunction at software companies, where you start to notice that if you are aware of what’s going on, you can take your time with things. Now, I don’t really work more than 5 hours a day, because somebody is blocking me, or I need to wait for actual requirements after I basically interrogate people for it. I’m still outputting more than the rest of the team doing this as well, closing more tickets than the rest of the team by a factor of 2. To my dismay, this means that I am too visible, and I am now getting even more tasks, all of which were somebody else’s.</p>
+        <p>There’s more things I can complain about here, like how we got our own outsourced devs that I need to babysit and fix their code, or how the food in this part of town sucks, there’s still some good things going on, for example, my commute is shorter working here, and I got my promotion leaked to me (Meaning that I will stick around to at least next June), or how I’m FINALLY off that AI app project.</p>
+        <p>Unfortunately, I’ve heard they are telling the public they hand-rolled their own GPT in the app, so if the blatant fraud ever gets caught and they need a fall guy, I might be writing the next posts from jail.</p>
+        <p>P.S. Sorry for not writing as much recently, I didn’t have much material and lacked the inspiration to write until now, more posts coming soon though!</p>
+        <p id="date-text" style="margin-bottom: 100px;">Written 21.10.2024</p>
+    </div>
+</body>
+</html>
