@@ -10,6 +10,6 @@ Current Progress:
 - [x] Releases
     - [x] Scripting for videos
 - [x] Setup
-- [ ] Embed for discord
-- [ ] Custom domain name
+- [x] Embed for discord
+- [x] Custom domain name
 - [x] Make site mobile friendly
