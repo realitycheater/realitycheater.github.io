@@ -26,6 +26,11 @@
     <div class="box" id="tab-title">
         <p>I Went to an AI Workshop and You Can Guess What Happened</p>
     </div>
+    <div class="checkbox-container">
+        <label>
+            <input type="checkbox" id="pauseCheckbox"> Reading Mode
+        </label>
+    </div>
     <div class="box" id="footer">
         <p id="footer-text"><i><p>
             this site is part of the <a href='https://staydown.money/'>staydown.money</a> 
@@ -56,5 +61,20 @@
         <p>P.S. Apologies for not writing in a while, didn’t have much motivation and material to work with, banged this one out quickly as I actually have something to do at work now, since we got onto a project by grossly lying to the client about the team’s capabilities… I have material again!</p>
         <p id="date-text" style="margin-bottom: 100px;">Written 29.05.2024</p>
     </div>
+    <script>
+        const checkbox = document.getElementById('pauseCheckbox');
+        const body = document.body;
+
+        const originalBackground = body.style.backgroundImage;
+        const staticBackground = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/pausedbackground.png")`; // A static frame image
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                body.style.backgroundImage = staticBackground;
+            } else {
+                body.style.backgroundImage = originalBackground;
+            }
+        });
+    </script>
 </body>
 </html>

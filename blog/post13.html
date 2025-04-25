@@ -26,6 +26,11 @@
     <div class="box" id="tab-title">
         <p>Aimtraining Cannot Justify Itself</p>
     </div>
+    <div class="checkbox-container">
+        <label>
+            <input type="checkbox" id="pauseCheckbox"> Reading Mode
+        </label>
+    </div>
     <div class="box" id="footer">
         <p id="footer-text"><i><p>
             this site is part of the <a href='https://staydown.money/'>staydown.money</a> 
@@ -58,5 +63,20 @@
         <p>With what I’ve written here, some may be under the assumption that I think aimtraining is doomed as a field, but that cannot be further from the case. While I think aimtraining can’t justify itself right now, I have full confidence that we can overcome these issues and continue to develop the scene as a community. There is undeniable value in aimtraining, and with changes to people’s understanding, mindset, and with time, I believe that aimtraining can one day become a rigorous field where players of all skill levels can partake and see real improvement, and I hope that I can be there to see it.</p>
         <p id="date-text" style="margin-bottom: 100px;">Written 25.04.2025</p>
     </div>
+    <script>
+        const checkbox = document.getElementById('pauseCheckbox');
+        const body = document.body;
+
+        const originalBackground = body.style.backgroundImage;
+        const staticBackground = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/pausedbackground.png")`; // A static frame image
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                body.style.backgroundImage = staticBackground;
+            } else {
+                body.style.backgroundImage = originalBackground;
+            }
+        });
+    </script>
 </body>
 </html>

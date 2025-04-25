@@ -26,6 +26,11 @@
     <div class="box" id="tab-title">
         <p>Apex Sucks! But Why?</p>
     </div>
+    <div class="checkbox-container">
+        <label>
+            <input type="checkbox" id="pauseCheckbox"> Reading Mode
+        </label>
+    </div>
     <div class="box" id="footer">
         <p id="footer-text"><i><p>
             this site is part of the <a href='https://staydown.money/'>staydown.money</a> 
@@ -50,5 +55,20 @@
         <p>Notice how I didn’t mention the monetization changes?</p>
         <p id="date-text" style="margin-bottom: 100px;">Written 18.07.2024</p>
     </div>
+    <script>
+        const checkbox = document.getElementById('pauseCheckbox');
+        const body = document.body;
+
+        const originalBackground = body.style.backgroundImage;
+        const staticBackground = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/pausedbackground.png")`; // A static frame image
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                body.style.backgroundImage = staticBackground;
+            } else {
+                body.style.backgroundImage = originalBackground;
+            }
+        });
+    </script>
 </body>
 </html>
