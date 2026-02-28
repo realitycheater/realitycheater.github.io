@@ -43,6 +43,7 @@ body {
     background-size: 100% auto;
     text-shadow: 2px 2px 2px black;
     text-align: center;
+    padding-bottom: 60px;
 }
 
 #tabs, #links, #home {
@@ -164,11 +165,17 @@ body {
     margin-right: 1.5%;
 }
 
+/* Footer styling */
 #footer {
-    font-size: 12px;
-    position: fixed;
-    bottom: 0;
-    margin-left: 1.5%;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;          /* span full width */
+  margin: 0;            /* reset margin */
+  padding: 10px 0;      /* breathing room */
+  text-align: center;   /* center content */
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.1); /* subtle separation */
 }
 
 #gallery {
